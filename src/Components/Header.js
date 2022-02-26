@@ -15,7 +15,7 @@ class Header extends Component {
     // const description = this.props.data.description;
 
     return (
-      
+
       <Design/>,
             <header id="home">
         <ParticlesBg type="circle" bg={true} />
@@ -37,7 +37,7 @@ class Header extends Component {
           <ul id="nav" className="nav">
             <li>
               <a className="h1" href="#portfolio" >
-                <div class="h1">Stockington</div>
+                {/* <div class="h1">Stockington</div> */}
 
 
               </a>
