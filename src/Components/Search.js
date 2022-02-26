@@ -29,18 +29,19 @@ function Search() {
   
   let set_list = new Set();
 
-  // let readFile = ("nyse.csv", "utf8", (error, textContent) => {
-  //   if(error){ throw error; }
-  //   const parsedData = [];
-  //   for(let row of textContent.split("\n")){
-  //     const rowItems = row.split(",");
-  //     set_list.add(rowItems[0].toString());
-  //   }
-  // }
+  let readFile = ("nyse.csv", "utf8", (error, textContent) => {
+    if(error){ throw error; }
+    const parsedData = [];
+    for(let row of textContent.split("\n")){
+      const rowItems = row.split(",");
+      set_list.add(rowItems[0].toString());
+    }
 
-  // let checkTicker = (query) => {
-  //   return set_list.has(query);
-  // }
+  });
+
+  let checkTicker = (query) => {
+    return set_list.has(query);
+  }
 
 // var fs = require("fs")
 // const FILE_LOCATION = "src/nyse.txt"
@@ -67,7 +68,7 @@ function Search() {
         data={data}
         callback={(record) => console.log(record)}
         onChange={e => setQuery(e.target.value)}
-        // onBlur={() => this.setState({tickerIsValid: checkTicker(query)})}
+        onBlur={() => this.setState({tickerIsValid: checkTicker(query)})}
       />
     );
   }
