@@ -3,11 +3,20 @@ import ReactGA from "react-ga";
 import $ from "jquery";
 import "./App.css";
 import Header from "./Components/Header";
+import Search from "./Components/Search";
+import Design from "./Components/Design";
+
+
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import Resume from "./Components/Resume";
+// import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
-import Portfolio from "./Components/Portfolio";
+import { Helmet } from 'react-helmet'
+import ParticlesBg from "particles-bg";
+
+
+// import Portfolio from "./Components/Portfolio";
+
 
 class App extends Component {
   constructor(props) {
@@ -43,12 +52,31 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} />
-        <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
-        <Portfolio data={this.state.resumeData.portfolio} />
-        <Contact data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} />
+        <Helmet>
+          <title>Stockington</title>
+        </Helmet>
+        <div className="search">
+          <div style={{margin:"2%"}}>
+            <Design></Design> 
+          </div>
+
+          <Search/>
+        </div>
+        <Header/>
+
+        
+
+  
+       
+
+        {/* <Header data={this.state.resumeData.main} /> */}
+
+
+        {/* <About data={this.state.resumeData.main} /> */}
+        {/* <Resume data={this.state.resumeData.resume} /> */}
+        {/* <Portfolio data={this.state.resumeData.portfolio} /> */}
+        {/* <Contact data={this.state.resumeData.main} />*/}
+        <Footer /> 
       </div>
     );
   }
