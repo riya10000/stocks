@@ -8,7 +8,7 @@ class Design extends Component {
 
 
     return (
-        <h3>Pick a Stock Ticker below</h3>
+        <h3>Stockington</h3>
     );
   }
 }
