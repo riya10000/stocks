@@ -24,6 +24,8 @@ h3 {
     position: absolute;
     z-index: 999;
     top:30%;
+    text-align: center;
+
 }
 .main-search-input-field {
     background-color :rgb(87, 134, 0);
@@ -37,7 +39,7 @@ ul li {
 body {
     background-color: #282c34;
     color: white;
-    padding: 3%;
+    /* padding: 3%; */
     font-family: Georgia;
     text-align: center;
   }
