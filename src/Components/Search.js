@@ -63,7 +63,7 @@ function Search() {
 
     return (
       <ReactSearchBox
-        placeholder="AAPL, MSFT, DISC, ETC. "
+        placeholder="Select a stock ticker"
         value={query}
         data={data}
         callback={(record) => console.log(record)}
